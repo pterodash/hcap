@@ -1,0 +1,38 @@
+<!doctype html >
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCaptcha</title>
+    <script src="hcaptcha.js?version=4"></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+    
+  </head>
+  <body>
+    <form action="?sitekey=4c672d35-0701-42b2-88c3-78380b0db560" method="GET" id="sitekey-form">
+      <label for="sitekey">Hcaptcha</label><br>
+      <input type="text" value="" id="sitekey" name="sitekey" size="33" /><br><br>
+      <input type="submit"  value="Load hCaptcha" />
+    </form>
+    <hr>
+    <div id="error2"></div><br>
+    <form action="/" method="POST" id="hcaptcha-form">
+      <div id="h-captcha-div" ></div><br>
+      <input type="submit" value="Generate h-captcha-response" />
+    </form>
+    <hr>
+    <div>
+      <span>
+        <label for="resp">h-captcha-response</label><br>
+        <textarea id="resp" cols="42" rows="5" ></textarea>
+      </span>
+      <br><br>
+      <button onclick="copyToClipboard()" id="copybt" >Copy Captcha</button><br>
+      <span id="cpmessage"></span>
+    </div>
+
+    <script src="matomo.js?version=2"></script>
+  </body>
+</html>
+
